@@ -1,3 +1,7 @@
+/*The use of flash memory to save clock cycles
+  Flash0CtrlRegs.FRDCNTL.bit.RWAIT = certain_number; line changes the default clock cycle(15) to possible lower # of cycles 
+  Tested on F2837xD launchpad, needs more testing on CCS3220SF
+*/
 #include "F2837xD_device.h"
 #pragma CODE_SECTION(InitFlash, "RamFuncs")
 void InitFlash(void){
