@@ -10,4 +10,4 @@
 
 This repo contains the XCode project for the BUSCA App
 
-<img src="images/app-prototype.jpg" alt="BUSCA App prototype" style="width:30%;height:30%">
+<img src="images/app-prototype.jpg" alt="BUSCA App prototype" width="151" height="349">
