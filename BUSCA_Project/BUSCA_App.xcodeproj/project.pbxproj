@@ -15,10 +15,11 @@
 		178F78DF2010252700CFFF71 /* DrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178F78DE2010252700CFFF71 /* DrawerController.swift */; };
 		178F78E12010257600CFFF71 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178F78E02010257600CFFF71 /* RootViewController.swift */; };
 		178F78E3201025FD00CFFF71 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178F78E2201025FD00CFFF71 /* MenuViewController.swift */; };
+		6A1A6FEB23E0A2A5003AA6B4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A1A6FEA23E0A2A5003AA6B4 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		178F78C82010251400CFFF71 /* DrawerMenuExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawerMenuExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		178F78C82010251400CFFF71 /* BUSCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BUSCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		178F78CB2010251400CFFF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		178F78CD2010251400CFFF71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		178F78D02010251400CFFF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,6 +29,7 @@
 		178F78DE2010252700CFFF71 /* DrawerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerController.swift; sourceTree = "<group>"; };
 		178F78E02010257600CFFF71 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		178F78E2201025FD00CFFF71 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		6A1A6FEA23E0A2A5003AA6B4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,8 +46,9 @@
 		178F78BF2010251400CFFF71 = {
 			isa = PBXGroup;
 			children = (
+				6A1A6FEA23E0A2A5003AA6B4 /* Default-568h@2x.png */,
 				178F78DD2010252700CFFF71 /* DrawerMenu */,
-				178F78CA2010251400CFFF71 /* DrawerMenuExample */,
+				178F78CA2010251400CFFF71 /* BUSCA_App */,
 				178F78C92010251400CFFF71 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,12 +56,12 @@
 		178F78C92010251400CFFF71 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				178F78C82010251400CFFF71 /* DrawerMenuExample.app */,
+				178F78C82010251400CFFF71 /* BUSCA.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		178F78CA2010251400CFFF71 /* DrawerMenuExample */ = {
+		178F78CA2010251400CFFF71 /* BUSCA_App */ = {
 			isa = PBXGroup;
 			children = (
 				178F78CB2010251400CFFF71 /* AppDelegate.swift */,
@@ -68,7 +71,7 @@
 				178F78D42010251400CFFF71 /* LaunchScreen.storyboard */,
 				178F78D72010251400CFFF71 /* Info.plist */,
 			);
-			path = DrawerMenuExample;
+			path = BUSCA_App;
 			sourceTree = "<group>";
 		};
 		178F78DD2010252700CFFF71 /* DrawerMenu */ = {
@@ -85,9 +88,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		178F78C72010251400CFFF71 /* DrawerMenuExample */ = {
+		178F78C72010251400CFFF71 /* BUSCA_App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 178F78DA2010251400CFFF71 /* Build configuration list for PBXNativeTarget "DrawerMenuExample" */;
+			buildConfigurationList = 178F78DA2010251400CFFF71 /* Build configuration list for PBXNativeTarget "BUSCA_App" */;
 			buildPhases = (
 				178F78C42010251400CFFF71 /* Sources */,
 				178F78C52010251400CFFF71 /* Frameworks */,
@@ -97,9 +100,9 @@
 			);
 			dependencies = (
 			);
-			name = DrawerMenuExample;
+			name = BUSCA_App;
 			productName = DrawerMenuExample;
-			productReference = 178F78C82010251400CFFF71 /* DrawerMenuExample.app */;
+			productReference = 178F78C82010251400CFFF71 /* BUSCA.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -118,7 +121,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 178F78C32010251400CFFF71 /* Build configuration list for PBXProject "DrawerMenuExample" */;
+			buildConfigurationList = 178F78C32010251400CFFF71 /* Build configuration list for PBXProject "BUSCA_App" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -131,7 +134,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				178F78C72010251400CFFF71 /* DrawerMenuExample */,
+				178F78C72010251400CFFF71 /* BUSCA_App */,
 			);
 		};
 /* End PBXProject section */
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				178F78D62010251400CFFF71 /* LaunchScreen.storyboard in Resources */,
+				6A1A6FEB23E0A2A5003AA6B4 /* Default-568h@2x.png in Resources */,
 				178F78D32010251400CFFF71 /* Assets.xcassets in Resources */,
 				178F78D12010251400CFFF71 /* Main.storyboard in Resources */,
 			);
@@ -300,13 +304,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JSQ6T9Y6J4;
+				DEVELOPMENT_TEAM = B3ZVFFUM52;
 				INFOPLIST_FILE = DrawerMenuExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosapptemplates.DrawerMenuExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosapptemplates.BUSCA;
+				PRODUCT_NAME = BUSCA;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -318,17 +322,17 @@
 				DEVELOPMENT_TEAM = JSQ6T9Y6J4;
 				INFOPLIST_FILE = DrawerMenuExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosapptemplates.DrawerMenuExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosapptemplates.BUSCA;
+				PRODUCT_NAME = BUSCA;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		178F78C32010251400CFFF71 /* Build configuration list for PBXProject "DrawerMenuExample" */ = {
+		178F78C32010251400CFFF71 /* Build configuration list for PBXProject "BUSCA_App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				178F78D82010251400CFFF71 /* Debug */,
@@ -337,7 +341,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		178F78DA2010251400CFFF71 /* Build configuration list for PBXNativeTarget "DrawerMenuExample" */ = {
+		178F78DA2010251400CFFF71 /* Build configuration list for PBXNativeTarget "BUSCA_App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				178F78DB2010251400CFFF71 /* Debug */,
