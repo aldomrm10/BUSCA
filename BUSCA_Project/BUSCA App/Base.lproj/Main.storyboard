@@ -161,31 +161,31 @@
         <!--3rd floor-->
         <scene sceneID="JKA-qc-3iJ">
             <objects>
-                <viewController id="JzQ-9e-MI8" sceneMemberID="viewController">
+                <viewController id="JzQ-9e-MI8" customClass="ViewController" customModule="BUSCA_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="THd-e2-BIG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="culc3rdfloor" translatesAutoresizingMaskIntoConstraints="NO" id="nWx-PI-ncM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="culc3rdfloor" translatesAutoresizingMaskIntoConstraints="NO" id="nWx-PI-ncM">
                                 <rect key="frame" x="20" y="106" width="374" height="765"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🟩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MD5-Fg-Fgr">
-                                <rect key="frame" x="254" y="196" width="11" height="11"/>
+                                <rect key="frame" x="284" y="159" width="11" height="11"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🟩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiv-gW-fzs">
-                                <rect key="frame" x="270" y="196" width="11" height="11"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="2" text="🟩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiv-gW-fzs">
+                                <rect key="frame" x="300" y="159" width="11" height="11"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🟩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEh-rO-ulz">
-                                <rect key="frame" x="237" y="196" width="11" height="11"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="0" text="🟩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEh-rO-ulz">
+                                <rect key="frame" x="267" y="159" width="11" height="11"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                 <nil key="textColor"/>
@@ -196,10 +196,15 @@
                         <viewLayoutGuide key="safeArea" id="ud6-j2-7Mv"/>
                     </view>
                     <navigationItem key="navigationItem" title="3rd floor" id="0U8-3f-vvT"/>
+                    <connections>
+                        <outletCollection property="culc3" destination="MD5-Fg-Fgr" collectionClass="NSMutableArray" id="Jij-Dd-CSS"/>
+                        <outletCollection property="culc3" destination="wiv-gW-fzs" collectionClass="NSMutableArray" id="ndD-5C-40m"/>
+                        <outletCollection property="culc3" destination="AEh-rO-ulz" collectionClass="NSMutableArray" id="Abi-bl-NtP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJY-DK-ROa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4025" y="449"/>
+            <point key="canvasLocation" x="4024.6376811594205" y="448.66071428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="72n-Dm-IOK">
@@ -464,7 +469,7 @@
         <image name="TechTowerSign" width="1140" height="760"/>
         <image name="culc1stfloor" width="686" height="1318"/>
         <image name="culc2ndfloor" width="684" height="1348"/>
-        <image name="culc3rdfloor" width="696" height="1338"/>
+        <image name="culc3rdfloor" width="736" height="1600"/>
         <image name="culc4thfloor" width="810" height="1600"/>
         <image name="culc5thfloor" width="730" height="1600"/>
     </resources>
