@@ -21,26 +21,24 @@ class Culc2ndFloor : UIViewController, FloorViewController {
     }
     
     func updateLabels() { 
-        var status : Bool? = nil
+        var status : Bool?
         var floor : NSDictionary?
         var building : String?
         for table in tables {
+            status = nil
             print("id: '\(table.restorationIdentifier ?? "none")'")
             if (table.restorationIdentifier != nil) {
-                building = (BuscaModel.database[ "Building"] as? String?) ?? nil
+                building = (BuscaModel.database["Building"] as? String?) ?? nil
                 if (building != "CULC") {
                     print("Building: \(building ?? "nil")")
-                    break
+                    floor = BuscaModel.database.object(forKey: "Floor2") as! NSDictionary?
+                    if (floor != nil) {
+                        status = floor!.object(forKey: table.restorationIdentifier!) as! Bool?
+                        print(status ?? "status is nil")
+                    } else {
+                        print("floor is nil")
+                    }
                 }
-                floor = BuscaModel.database.object(forKey: "Floor2") as! NSDictionary?
-                if (floor != nil) {
-                    status = floor!.object(forKey: table.restorationIdentifier!) as! Bool?
-                    print(status ?? "status is nil")
-                } else {
-                    print("floor is nil")
-                }
-            } else {
-                print("table has no identifier")
             }
             if (status == nil) {
                 table.text="⬛️"
