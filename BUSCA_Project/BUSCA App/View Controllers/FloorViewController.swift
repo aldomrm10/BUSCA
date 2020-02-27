@@ -15,6 +15,5 @@ protocol FloorViewController : UIViewController {
     var urlString : String { get }
     
     func updateLabels() -> Void
-    func getStatus(id: String?) -> Bool?
     
 }
