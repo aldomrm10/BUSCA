@@ -207,7 +207,7 @@ void runAWSClient(void)
         sprintf(cPayload, "%s : %d ", "hello from SDK QOS0", i++);
         /* Recalculate string len to avoid truncation in subscribe callback */
         paramsQOS0.payloadLen = strlen(cPayload);
-        rc = aws_iot_mqtt_publish(&client, topicName, topicNameLen,
+        rc = aws_iot_mqtt_publish(&client, topicName, topicNameLen,            // THIS LINE PUBLISHES THE MESSAGE TO AWS
                 &paramsQOS0);
         if (publishCount > 0) {
            publishCount--;
