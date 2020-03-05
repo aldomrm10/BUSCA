@@ -15,10 +15,9 @@ struct Device  {
     var status : Bool? = nil
     init(json : NSDictionary?) {
         if (json != nil) {
-            print("json: \(json!)")
             self.id = json!["DeviceID"] as? String
             self.building = json!["Building"] as? String
-            self.floor = Int(json!["Floor"] as! String)
+            self.floor = Int(json!["Floor"] as? String ?? "0")
             let st = json!["Status"] as? String
             if (st == "true") {
                 self.status = true
@@ -97,7 +96,7 @@ class BuscaModel {
                 if (data != nil) {
                     str = String(decoding: data!, as: UTF8.self)
                 }
-                print(str)
+                print("received: \(str)")
                 
                 let json : NSDictionary = try JSONSerialization.jsonObject(with: data!, options: []) as! NSDictionary
                 let statusCode = json.object(forKey: "statusCode")
@@ -106,8 +105,6 @@ class BuscaModel {
                         // put data in database
                         let list = json["body"] as? [NSDictionary]
                         if (list != nil) {
-                            print("list = \(list!)")
-                            print("list[1] = \(list![1])")
                             for item in list! {
                                 let dev = Device(json: item)
                                 
@@ -143,11 +140,17 @@ class BuscaModel {
                 } else {
                     print("statusCode is nil")
                 }
+                printDataBase()
             } catch {
                 print("JSON error: \(error.localizedDescription)")
             }
         }
         task.resume()
+    }
+    
+    static func printDataBase() {
+        print("database:")
+        print(BuscaModel.database)
     }
     
 }
