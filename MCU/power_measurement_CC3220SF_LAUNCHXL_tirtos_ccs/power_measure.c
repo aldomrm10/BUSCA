@@ -1124,7 +1124,7 @@ int32_t intermittentlyConnected(void)
     
     status = sl_Stop(SL_STOP_TIMEOUT);
     /* enter hibernate */
-    powerShutdown(5000);
+    powerShutdown(5000); // THIS LINE DEFINES THE HIBERNATION PERIOD
     /* this line is never Reached */
     return(status);
 }
