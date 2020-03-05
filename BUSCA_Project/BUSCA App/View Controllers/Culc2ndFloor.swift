@@ -22,19 +22,27 @@ class Culc2ndFloor : UIViewController, FloorViewController {
     
     func updateLabels() { 
         var status : Bool?
-        var floor : NSDictionary?
-        var building : String?
+        var floor : Devices?
+        var building : Floors?
         for table in tables {
             status = nil
             print("id: '\(table.restorationIdentifier ?? "none")'")
             if (table.restorationIdentifier != nil) {
-                building = (BuscaModel.database["Building"] as? String?) ?? nil
-                if (building != "CULC") {
-                    print("Building: \(building ?? "nil")")
-                    floor = BuscaModel.database.object(forKey: "Floor2") as! NSDictionary?
+                building = BuscaModel.database["CULC"]
+                if (building == nil) {
+                    print("Building is nil")
+                } else {
+                    floor = building![2]
                     if (floor != nil) {
-                        status = floor!.object(forKey: table.restorationIdentifier!) as! Bool?
-                        print(status ?? "status is nil")
+                        if (table.restorationIdentifier != nil) {
+                            let device = floor![table.restorationIdentifier!]
+                            if (device != nil) {
+                                if (device!.status != nil) {
+                                    print("id: \(table.restorationIdentifier!)) status: \(device!.status!)")
+                                    status = device!.status
+                                }
+                            }
+                        }
                     } else {
                         print("floor is nil")
                     }

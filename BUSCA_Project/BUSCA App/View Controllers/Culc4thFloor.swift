@@ -21,26 +21,32 @@ class Culc4thFloor : UIViewController {
     }
     
     func updateLabels() {
-        var status : Bool? = nil
-        var floor : NSDictionary?
-        var building : String?
+        var status : Bool?
+        var floor : Devices?
+        var building : Floors?
         for table in tables {
+            status = nil
             print("id: '\(table.restorationIdentifier ?? "none")'")
             if (table.restorationIdentifier != nil) {
-                building = (BuscaModel.database[ "Building"] as? String?) ?? nil
-                if (building != "CULC") {
-                    print("Building: \(building ?? "nil")")
-                    break
-                }
-                floor = BuscaModel.database.object(forKey: "Floor4") as! NSDictionary?
-                if (floor != nil) {
-                    status = floor!.object(forKey: table.restorationIdentifier!) as! Bool?
-                    print(status ?? "status is nil")
+                building = BuscaModel.database["CULC"]
+                if (building == nil) {
+                    print("Building is nil")
                 } else {
-                    print("floor is nil")
+                    floor = building![4]
+                    if (floor != nil) {
+                        if (table.restorationIdentifier != nil) {
+                            let device = floor![table.restorationIdentifier!]
+                            if (device != nil) {
+                                if (device!.status != nil) {
+                                    print("id: \(table.restorationIdentifier!)) status: \(device!.status!)")
+                                    status = device!.status
+                                }
+                            }
+                        }
+                    } else {
+                        print("floor is nil")
+                    }
                 }
-            } else {
-                print("table has no identifier")
             }
             if (status == nil) {
                 table.text="⬛️"
