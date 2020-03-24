@@ -29,8 +29,8 @@
 #define AWS_IOT_MY_THING_NAME          "TI-dev" ///< Thing Name of the Shadow this device is associated with
 
 #define AWS_IOT_ROOT_CA_FILENAME       "/certs/sf-class2-root.crt" ///< Root CA file name
-#define AWS_IOT_CERTIFICATE_FILENAME   "/certs/f58f12bf20-certificate.pem.crt" ///< device signed certificate file name
-#define AWS_IOT_PRIVATE_KEY_FILENAME   "/certs/f58f12bf20-private.pem.key" ///< Device private key filename
+#define AWS_IOT_CERTIFICATE_FILENAME   "/certs/86cd36e71b-certificate.pem.crt" ///< device signed certificate file name
+#define AWS_IOT_PRIVATE_KEY_FILENAME   "/certs/86cd36e71b-private.pem.key" ///< Device private key filename
 // =================================================
 
 // MQTT PubSub
