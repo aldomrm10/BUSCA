@@ -106,6 +106,7 @@ class BuscaModel {
                         let list = json["body"] as? [NSDictionary]
                         if (list != nil) {
                             for item in list! {
+                                print(item)
                                 let dev = Device(json: item)
                                 
                                 let buildingName = dev.building // String

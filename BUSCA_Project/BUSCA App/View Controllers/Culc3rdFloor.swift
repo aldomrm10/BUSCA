@@ -16,6 +16,7 @@ class Culc3rdFloor : UIViewController, FloorViewController {
     var urlString : String = "https://fvqmb46jr5.execute-api.us-east-1.amazonaws.com/test/helloworld"
     
     override func viewDidLoad() {
+//        BuscaModel.checkStatus()
         updateLabels()
         super.viewDidLoad()
     }
