@@ -209,9 +209,9 @@ void runAWSClient(void)
         // JSON formatting do this for printf quotes \"message\"
         // Make sure everything is in quotes
         if(is_taken){
-            sprintf(cPayload, "{\"Building\" : %s, \"Floor\" : %s, \"DeviceID\" : %s, \"Status\" : %s}","\"CULC\"","\"Floor3\"", "\"B\"", "\"true\"");
+            sprintf(cPayload, "{\"Building\" : %s, \"Floor\" : %s, \"DeviceID\" : %s, \"Status\" : %s}","\"CULC\"","\"3\"", "\"B\"", "\"true\"");
         } else {
-            sprintf(cPayload, "{\"Building\" : %s, \"Floor\" : %s, \"DeviceID\" : %s, \"Status\" : %s}","\"CULC\"","\"Floor3\"", "\"B\"", "\"false\"");
+            sprintf(cPayload, "{\"Building\" : %s, \"Floor\" : %s, \"DeviceID\" : %s, \"Status\" : %s}","\"CULC\"","\"3\"", "\"B\"", "\"false\"");
         }
         /* Recalculate string len to avoid truncation in subscribe callback */
         paramsQOS0.payloadLen = strlen(cPayload);
