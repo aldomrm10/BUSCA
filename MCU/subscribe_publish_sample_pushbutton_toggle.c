@@ -45,6 +45,7 @@
  * @brief Default MQTT HOST URL is pulled from the aws_iot_config.h
  */
 bool is_taken = false;
+bool is_changed = true;
 
 static char HostAddress[HOST_ADDRESS_SIZE] = AWS_IOT_MQTT_HOST;
 
@@ -57,7 +58,7 @@ static uint32_t port = AWS_IOT_MQTT_PORT;
  * @brief This parameter will avoid infinite loop of publish and exit the
  *          program after certain number of publishes
  */
-static uint32_t publishCount = 10;
+static uint32_t publishCount = 0;
 
 static void iot_subscribe_callback_handler(AWS_IoT_Client *pClient,
         char *topicName, uint16_t topicNameLen,
@@ -103,6 +104,7 @@ void buttonCallbackFxn(Button_Handle handle, Button_EventMask events)
        {
            //Recieved a press, toggle the flag
            is_taken = !is_taken;
+           is_changed = true;
        }
 }
 
@@ -197,6 +199,9 @@ void runAWSClient(void)
     while ((NETWORK_ATTEMPTING_RECONNECT == rc || NETWORK_RECONNECTED == rc ||
             SUCCESS == rc) && (publishCount > 0 || infinitePublishFlag)) {
         // Max time the yield function will wait for read messages
+
+        if(is_changed){
+
         rc = aws_iot_mqtt_yield(&client, 100);
 
         if (NETWORK_ATTEMPTING_RECONNECT == rc) {
@@ -205,7 +210,7 @@ void runAWSClient(void)
         }
 
         IOT_INFO("-->sleep");
-        sleep(1);
+        sleep(5);
         // JSON formatting do this for printf quotes \"message\"
         // Make sure everything is in quotes
         if(is_taken){
@@ -213,6 +218,7 @@ void runAWSClient(void)
         } else {
             sprintf(cPayload, "{\"Building\" : %s, \"Floor\" : %s, \"DeviceID\" : %s, \"Status\" : %s}","\"CULC\"","\"3\"", "\"B\"", "\"false\"");
         }
+        is_changed = false;
         /* Recalculate string len to avoid truncation in subscribe callback */
         paramsQOS0.payloadLen = strlen(cPayload);
         rc = aws_iot_mqtt_publish(&client, topicName, topicNameLen,
@@ -238,6 +244,10 @@ void runAWSClient(void)
 //        if (publishCount > 0) {
 //            publishCount--;
 //        }
+        } else {
+            IOT_INFO("Nothing changed-->sleep");
+            sleep(5);
+        }
     }
 
     // Wait for all the messages to be received
