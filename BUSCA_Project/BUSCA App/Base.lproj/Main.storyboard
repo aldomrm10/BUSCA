@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WIG-Rc-zqd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WIG-Rc-zqd">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -249,7 +249,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g6K-MA-CAh">
                                 <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cpx-tS-CKN" userLabel="ContentView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpx-tS-CKN" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="804"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="culc3rdfloor" translatesAutoresizingMaskIntoConstraints="NO" id="nWx-PI-ncM">
@@ -392,15 +392,15 @@
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.91450315709999996" blue="0.52455687520000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="419" id="GAe-J0-sHJ"/>
-                                            <constraint firstAttribute="height" constant="1400" id="yr7-FH-JH2"/>
+                                            <constraint firstAttribute="height" constant="804" id="n59-Pv-1wr"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="cpx-tS-CKN" firstAttribute="top" secondItem="dar-MT-xPd" secondAttribute="top" id="066-kf-J3Z"/>
-                                    <constraint firstAttribute="bottom" secondItem="cpx-tS-CKN" secondAttribute="bottom" constant="-596" id="O7f-Vd-Dpr"/>
+                                    <constraint firstAttribute="bottom" secondItem="cpx-tS-CKN" secondAttribute="bottom" constant="20" id="O7f-Vd-Dpr"/>
                                     <constraint firstAttribute="trailing" secondItem="cpx-tS-CKN" secondAttribute="trailing" id="QQ5-Hh-QSy"/>
+                                    <constraint firstAttribute="width" secondItem="g6K-MA-CAh" secondAttribute="height" multiplier="207:346" id="W6y-B8-oUG"/>
                                     <constraint firstItem="cpx-tS-CKN" firstAttribute="leading" secondItem="g6K-MA-CAh" secondAttribute="leading" id="bSf-Wa-mwE"/>
                                     <constraint firstItem="cpx-tS-CKN" firstAttribute="trailing" secondItem="v6N-eq-Xfa" secondAttribute="trailing" id="h41-8Y-9Sn"/>
                                 </constraints>
@@ -411,14 +411,24 @@
                         <color key="backgroundColor" red="1" green="0.91450315709999996" blue="0.52455687520000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ud6-j2-7Mv" firstAttribute="top" secondItem="g6K-MA-CAh" secondAttribute="top" id="8zB-mA-VZs"/>
-                            <constraint firstItem="cpx-tS-CKN" firstAttribute="bottom" secondItem="ud6-j2-7Mv" secondAttribute="bottom" id="C2T-lG-4ly"/>
                             <constraint firstItem="g6K-MA-CAh" firstAttribute="centerY" secondItem="ud6-j2-7Mv" secondAttribute="centerY" id="OcP-4u-n5J"/>
                             <constraint firstItem="g6K-MA-CAh" firstAttribute="trailing" secondItem="ud6-j2-7Mv" secondAttribute="trailing" id="qBw-Zv-GbO"/>
                             <constraint firstItem="ud6-j2-7Mv" firstAttribute="leading" secondItem="g6K-MA-CAh" secondAttribute="leading" id="yee-Fo-un0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ud6-j2-7Mv"/>
                     </view>
-                    <navigationItem key="navigationItem" title="3rd floor" id="0U8-3f-vvT"/>
+                    <navigationItem key="navigationItem" title="3rd floor" id="0U8-3f-vvT">
+                        <barButtonItem key="rightBarButtonItem" image="arrow.clockwise" catalog="system" landscapeImage="arrow.clockwise" style="plain" id="Nae-Xk-hin">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qMa-bg-OQb">
+                                <rect key="frame" x="376" y="11" width="18" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="arrow.clockwise" catalog="system"/>
+                                <connections>
+                                    <action selector="viewDidLoad" destination="JzQ-9e-MI8" eventType="touchUpInside" id="lpv-nE-0tG"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outletCollection property="tables" destination="VBS-fg-sIS" collectionClass="NSMutableArray" id="EBv-s3-rxk"/>
                         <outletCollection property="tables" destination="uh5-aV-ozY" collectionClass="NSMutableArray" id="pfY-J3-xb1"/>
@@ -602,10 +612,10 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdR-K1-kZl">
                                 <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8c4-b8-CPy" userLabel="ContentView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8c4-b8-CPy" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="419" height="1400"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="culc1stfloor" translatesAutoresizingMaskIntoConstraints="NO" id="fKA-GA-XQ0">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="culc1stfloor" translatesAutoresizingMaskIntoConstraints="NO" id="fKA-GA-XQ0">
                                                 <rect key="frame" x="20" y="21" width="379" height="765"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="765" id="jHf-pq-jDD"/>
@@ -614,18 +624,19 @@
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.91450315709999996" blue="0.52455687520000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="fKA-GA-XQ0" firstAttribute="leading" secondItem="8c4-b8-CPy" secondAttribute="leading" constant="20" symbolic="YES" id="1Ut-L2-DTN"/>
-                                            <constraint firstAttribute="width" constant="419" id="5m3-ov-E3X"/>
-                                            <constraint firstAttribute="trailing" secondItem="fKA-GA-XQ0" secondAttribute="trailing" constant="20" symbolic="YES" id="9xl-QE-6eq"/>
-                                            <constraint firstItem="fKA-GA-XQ0" firstAttribute="top" secondItem="8c4-b8-CPy" secondAttribute="top" constant="20" id="vGW-dc-CdF"/>
-                                            <constraint firstAttribute="height" constant="1400" id="xl1-kk-6aK"/>
+                                            <constraint firstAttribute="width" constant="419" id="6SV-CL-Bw4"/>
+                                            <constraint firstItem="fKA-GA-XQ0" firstAttribute="top" secondItem="8c4-b8-CPy" secondAttribute="top" constant="21" id="Ll9-F4-Rqd"/>
+                                            <constraint firstItem="fKA-GA-XQ0" firstAttribute="leading" secondItem="8c4-b8-CPy" secondAttribute="leading" constant="20" id="OaB-KB-LJW"/>
+                                            <constraint firstItem="fKA-GA-XQ0" firstAttribute="centerX" secondItem="8c4-b8-CPy" secondAttribute="centerX" id="lFI-ER-utn"/>
+                                            <constraint firstAttribute="height" constant="1400" id="ykl-Z6-Y3I"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="8c4-b8-CPy" firstAttribute="leading" secondItem="FdR-K1-kZl" secondAttribute="leading" id="7K6-i9-Ou7"/>
+                                    <constraint firstAttribute="width" secondItem="FdR-K1-kZl" secondAttribute="height" multiplier="207:346" id="8iS-FV-Cv0"/>
+                                    <constraint firstItem="8c4-b8-CPy" firstAttribute="top" secondItem="cbP-cU-WLE" secondAttribute="top" id="Kx2-F4-IbK"/>
                                     <constraint firstAttribute="trailing" secondItem="8c4-b8-CPy" secondAttribute="trailing" id="Rq8-XH-k0E"/>
-                                    <constraint firstItem="8c4-b8-CPy" firstAttribute="top" secondItem="FdR-K1-kZl" secondAttribute="top" constant="20" symbolic="YES" id="TST-Jk-trJ"/>
                                     <constraint firstAttribute="bottom" secondItem="8c4-b8-CPy" secondAttribute="bottom" constant="-596" id="fx6-wp-Xn3"/>
                                     <constraint firstItem="8c4-b8-CPy" firstAttribute="leading" secondItem="cbP-cU-WLE" secondAttribute="leading" id="vYg-gI-dVz"/>
                                 </constraints>
@@ -659,11 +670,11 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9l3-Il-qwC">
                                 <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HuL-Uy-Gcf" userLabel="ContentView">
-                                        <rect key="frame" x="5" y="0.0" width="414" height="1400"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HuL-Uy-Gcf" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="culc2ndfloor" translatesAutoresizingMaskIntoConstraints="NO" id="zHq-jY-GAe">
-                                                <rect key="frame" x="20" y="19" width="374" height="765"/>
+                                                <rect key="frame" x="16" y="19" width="374" height="765"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🟩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWH-Pf-U5U">
@@ -732,16 +743,16 @@
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.91450315709999996" blue="0.52455687520000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1400" id="gyX-et-0IL"/>
-                                            <constraint firstAttribute="width" constant="419" id="ifT-tp-b2w"/>
+                                            <constraint firstAttribute="height" constant="1400" id="3Ij-vA-Wht"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="HuL-Uy-Gcf" secondAttribute="bottom" constant="-596" id="ALI-fB-yHA"/>
                                     <constraint firstAttribute="trailing" secondItem="HuL-Uy-Gcf" secondAttribute="trailing" id="GXv-TQ-biN"/>
+                                    <constraint firstAttribute="width" secondItem="9l3-Il-qwC" secondAttribute="height" multiplier="207:346" id="TcA-FE-Vil"/>
                                     <constraint firstItem="HuL-Uy-Gcf" firstAttribute="trailing" secondItem="aPa-WM-2hu" secondAttribute="trailing" id="bek-mh-3oi"/>
-                                    <constraint firstItem="HuL-Uy-Gcf" firstAttribute="leading" secondItem="9l3-Il-qwC" secondAttribute="leading" constant="20" symbolic="YES" id="m20-Ze-Lox"/>
+                                    <constraint firstItem="HuL-Uy-Gcf" firstAttribute="leading" secondItem="9l3-Il-qwC" secondAttribute="leading" id="m20-Ze-Lox"/>
                                     <constraint firstItem="HuL-Uy-Gcf" firstAttribute="top" secondItem="ypc-DE-3do" secondAttribute="top" id="oB7-eA-Oxb"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="ypc-DE-3do"/>
@@ -757,7 +768,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HfT-2h-JhZ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="2nd floor" id="ElZ-NW-BQp"/>
+                    <navigationItem key="navigationItem" title="2nd floor" id="ElZ-NW-BQp">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="KO8-xW-Hzh">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LEQ-JC-xVV">
+                                <rect key="frame" x="376" y="11" width="18" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="arrow.clockwise" catalog="system"/>
+                            </button>
+                            <connections>
+                                <action selector="viewDidLoad" destination="C5D-0P-aY4" id="tx4-jI-n8i"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outletCollection property="tables" destination="6jh-hT-ogm" collectionClass="NSMutableArray" id="ovc-lN-XCT"/>
                         <outletCollection property="tables" destination="liX-EH-6fc" collectionClass="NSMutableArray" id="o5n-ff-lCv"/>
@@ -954,6 +976,7 @@
         <image name="Crosland_Tower,_Georgia_Tech" width="1234" height="1200"/>
         <image name="Klaus" width="1024" height="630"/>
         <image name="TechTowerSign" width="1140" height="760"/>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="culc1stfloor" width="686" height="1318"/>
         <image name="culc2ndfloor" width="684" height="1348"/>
         <image name="culc3rdfloor" width="736" height="1600"/>

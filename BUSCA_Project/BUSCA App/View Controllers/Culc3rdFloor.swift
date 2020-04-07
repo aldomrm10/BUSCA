@@ -15,19 +15,19 @@ class Culc3rdFloor : UIViewController, FloorViewController {
     
     var urlString : String = "https://fvqmb46jr5.execute-api.us-east-1.amazonaws.com/test/helloworld"
     
-    override func viewDidLoad() {
+    @IBAction override func viewDidLoad() {
 //        BuscaModel.checkStatus()
         updateLabels()
         super.viewDidLoad()
     }
     
-  func updateLabels() {
+    func updateLabels() {
        var status : Bool?
        var floor : Devices?
        var building : Floors?
        for table in tables {
            status = nil
-           print("id: '\(table.restorationIdentifier ?? "none")'")
+//           print("id: '\(table.restorationIdentifier ?? "none")'")
            if (table.restorationIdentifier != nil) {
                building = BuscaModel.database["CULC"]
                if (building == nil) {

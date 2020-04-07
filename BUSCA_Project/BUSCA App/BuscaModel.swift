@@ -57,6 +57,7 @@ class BuscaModel {
             min = calendar.component(.minute, from: date)
             min %= 10
             print("Min: \(min)")
+            sleep(UInt32(10))
             sleep(UInt32(600 - min * 60 + 30))  // devices will push status
                                                 // every 10 minutes to database
                                                 // (at every XX:X0 minute mark)

@@ -15,7 +15,7 @@ class Culc2ndFloor : UIViewController, FloorViewController {
     
     var urlString : String = "https://fvqmb46jr5.execute-api.us-east-1.amazonaws.com/test/helloworld"
     
-    override func viewDidLoad() {
+    @IBAction override func viewDidLoad() {
         updateLabels()
         super.viewDidLoad()
     }
