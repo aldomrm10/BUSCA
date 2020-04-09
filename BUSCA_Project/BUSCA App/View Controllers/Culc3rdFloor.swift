@@ -17,6 +17,7 @@ class Culc3rdFloor : UIViewController, FloorViewController {
     
     @IBAction override func viewDidLoad() {
 //        BuscaModel.checkStatus()
+        print("Updating")
         updateLabels()
         super.viewDidLoad()
     }
